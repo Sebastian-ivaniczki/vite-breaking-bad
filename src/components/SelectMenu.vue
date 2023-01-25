@@ -17,7 +17,7 @@
 <template>
     <div class="container d-flex justify-content-end">
 
-        <select @change="$emit('change-value')" v-model="selected" class="form-select" aria-label="Default select example">
+        <select @change="$emit('change-value', selected)" v-model="selected" class="form-select" aria-label="Default select example">
             <option selected value="">...</option>
             <option  v-for="data in datas" :value="data">{{ data }}</option>
         </select>
