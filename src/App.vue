@@ -37,6 +37,9 @@ export default {
       .then(res => {
         store.pokemons = res.data.docs
       })
+    },
+    fetchPokemonsType() {
+      console.log('funge')
     }
    
   }, 
@@ -50,7 +53,7 @@ export default {
 
 <template>
   <app-header></app-header>
-  <select-menu :datas="pokemonsType"></select-menu>
+  <select-menu @change-value=" fetchPokemonsType" :datas="pokemonsType"></select-menu>
   <app-main></app-main>
 </template>
 
