@@ -7,7 +7,29 @@ import AppMain from './components/AppMain.vue';
 export default {
  components: { AppHeader, AppMain, SelectMenu },
   data() {
-    return { store }
+    return { 
+      store ,
+      pokemonsType: [
+            "Ghost",
+            "Rock",
+            "Electric",
+            "Poison",
+            "Dark",
+            "Fighting",
+            "Normal",
+            "Dragon",
+            "Fire",
+            "Fairy",
+            "Steel",
+            "Ground",
+            "Water",
+            "Flying",
+            "Bug",
+            "Grass",
+            "Ice",
+            "Psychic"
+        ]
+    }
   },
   methods: {
     fetchPokemons() {
@@ -28,7 +50,7 @@ export default {
 
 <template>
   <app-header></app-header>
-  <select-menu></select-menu>
+  <select-menu :datas="pokemonsType"></select-menu>
   <app-main></app-main>
 </template>
 
