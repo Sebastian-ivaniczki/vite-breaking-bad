@@ -30,7 +30,7 @@ export default {
             "Ice",
             "Psychic"
         ],
-        slectedType: ''
+        
     }
   },
   methods: {
@@ -41,8 +41,8 @@ export default {
       })
     },
     fetchPokemonsType(selected) {
-      this.slectedType = selected
-      const uri = `https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?eq[type1]=${this.selectedType}`
+      
+      const uri = `https://41tyokboji.execute-api.eu-central-1.amazonaws.com/dev/api/v1/pokemons?eq[type1]=${selected}`
       this.fetchPokemons(uri)
     }
    
