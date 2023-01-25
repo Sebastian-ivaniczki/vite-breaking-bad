@@ -2,9 +2,10 @@
 import axios from 'axios';
 import { store } from './dta/store'
 import AppHeader from './components/AppHeader.vue';
+import SelectMenu from './components/SelectMenu.vue';
 import AppMain from './components/AppMain.vue';
 export default {
- components: { AppHeader, AppMain },
+ components: { AppHeader, AppMain, SelectMenu },
   data() {
     return { store }
   },
@@ -27,6 +28,7 @@ export default {
 
 <template>
   <app-header></app-header>
+  <select-menu></select-menu>
   <app-main></app-main>
 </template>
 
